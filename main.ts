@@ -14,12 +14,10 @@ let Bonba: game.LedSprite = null
 Bonba = game.createSprite(2, 0)
 basic.forever(function () {
     if (Bonba.get(LedSpriteProperty.Y) == 4) {
-        basic.showLeds(`
-            . # # # .
-            # # # # #
-            # # # # #
-            # # # # #
-            . # # # .
-            `)
+        basic.pause(500)
+        basic.showIcon(IconNames.Chessboard)
+        basic.showIcon(IconNames.SmallDiamond)
+        Bonba.set(LedSpriteProperty.X, 2)
+        Bonba.set(LedSpriteProperty.X, 0)
     }
 })
